@@ -1,7 +1,8 @@
 # :package_name
 
-![](https://img.shields.io/badge/Statamic-3.0+-FF269E?style=for-the-badge)
-![](https://img.shields.io/packagist/v/octoper/:package_name?style=for-the-badge)
+![Statami v3](https://img.shields.io/badge/Statamic-3.0+-FF269E)
+![Packagist](https://img.shields.io/packagist/v/octoper/:package_name)
+![Test Suite](https://github.com/octoper/statamic-package-skeleton/workflows/Test%20Suite/badge.svg)
 
 We try to keep this boilerplate as fresh as possible, but things are always changing, especially while Statamic is in beta. If you spot something that needs to be updated, fork and make a pull request!
 
