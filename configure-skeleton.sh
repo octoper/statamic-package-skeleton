@@ -41,7 +41,10 @@ echo -e "Author: $author_name ($author_username, $author_email)"
 echo -e "Package: $package_name <$package_description>"
 echo -e "Suggested Class Name: $class_name"
 
-vendor_name="$(tr '[:lower:]' '[:upper:]' <<< ${vendor_name_unsantized:0:1})${vendor_name_unsantized:1}"
+vendor_name="$(tr '[:lower:]' '[:upper:]' <<< "${vendor_name_unsantized:0:1}")${vendor_name_unsantized:1}"
+
+vendor_name_lower="$(tr '[:upper:]' '[:lower:]' <<< "${vendor_name_unsantized}")"
+
 package_name_underscore=`echo "-$package_name-" | tr '-' '_'`
 
 echo
@@ -63,6 +66,7 @@ for file in $files ; do
     | sed "s/:author_email/$author_email/g" \
     | sed "s/:package_name/$package_name/g" \
     | sed "s/Octoper/$vendor_name/g" \
+    | sed "s/octoper/$vendor_name_lower/g" \
     | sed "s/_skeleton_/$package_name_underscore/g" \
     | sed "s/skeleton/$package_name/g" \
     | sed "s/Skeleton/$class_name/g" \
