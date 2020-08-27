@@ -4,7 +4,7 @@ namespace Octoper\Skeleton\Tests;
 
 use Statamic\Extend\Manifest;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Octoper\Skeleton\SkeletonServiceProvider;
+use Octoper\Skeleton\SServiceProvider;
 use Statamic\Providers\StatamicServiceProvider;
 use Statamic\Statamic;
 
@@ -14,7 +14,7 @@ abstract class TestCase extends OrchestraTestCase
     {
         return [
             StatamicServiceProvider::class,
-            SkeletonServiceProvider::class,
+            ServiceProvider::class,
         ];
     }
 
@@ -30,9 +30,9 @@ abstract class TestCase extends OrchestraTestCase
         parent::getEnvironmentSetUp($app);
 
         $app->make(Manifest::class)->manifest = [
-            'statamic-package-skeleton' => [
-                'id' => 'octoper/statamic-package-skeleton',
-                'namespace' => 'DoubleThreeDigital\\AddonBoilerplate\\',
+            'skeleton' => [
+                'id' => 'octoper/skeleton',
+                'namespace' => 'Octoper\\Skeleton\\',
             ],
         ];
     }
