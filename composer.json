@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Octoper\\Skeleton\\SkeletonServiceProvider\\": "src"
+            "Octoper\\Skeleton\\": "src"
         }
     },
     "autoload-dev": {
@@ -47,7 +47,7 @@
         },
         "laravel": {
             "providers": [
-                "SkeletonServiceProvider"
+                "Octoper\\Skeleton\\ServiceProvider"
             ]
         }
     },
