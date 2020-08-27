@@ -1,6 +1,6 @@
 <?php
 
-namespace DoubleThreeDigital\AddonBoilerplate\Tests;
+namespace Octoper\Skeleton\Tests;
 
 class ExampleTest extends TestCase
 {
